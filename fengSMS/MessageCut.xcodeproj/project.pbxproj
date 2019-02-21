@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4DE34F221EC6A1005C23AC /* sms.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DE34E221EC6A1005C23AC /* sms.mlmodel */; };
+		2D4DE351221EC6A9005C23AC /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DE350221EC6A9005C23AC /* FilterModel.swift */; };
 		2D57CA7E221E5ABB0064930D /* propoety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA7D221E5ABB0064930D /* propoety.swift */; };
 		2D57CA83221E77C70064930D /* MessageFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA82221E77C70064930D /* MessageFilterTableViewCell.swift */; };
+		2D57CA86221E9CF20064930D /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA85221E9CF20064930D /* GuideViewController.swift */; };
+		2D57CA88221EA55F0064930D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA87221EA55F0064930D /* QuestionViewController.swift */; };
+		2D57CA8A221EAE120064930D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA89221EAE120064930D /* AboutViewController.swift */; };
+		2D57CA8C221EAE200064930D /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA8B221EAE200064930D /* PrivacyViewController.swift */; };
+		2D57CA8E221EBA500064930D /* MineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA8D221EBA500064930D /* MineWebViewController.swift */; };
 		6267EF4D21BDF0CE003BD812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF4C21BDF0CE003BD812 /* AppDelegate.swift */; };
 		6267EF4F21BDF0CE003BD812 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF4E21BDF0CE003BD812 /* MainViewController.swift */; };
 		6267EF5221BDF0CE003BD812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6267EF5021BDF0CE003BD812 /* Main.storyboard */; };
@@ -16,8 +23,6 @@
 		6267EF5721BDF0CF003BD812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6267EF5521BDF0CF003BD812 /* LaunchScreen.storyboard */; };
 		6267EF6B21BDF8E7003BD812 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF6A21BDF8E7003BD812 /* MessageFilterExtension.swift */; };
 		6267EF6F21BDF8E7003BD812 /* smsFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6267EF6821BDF8E7003BD812 /* smsFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6267EF7621BDFF03003BD812 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF7521BDFF03003BD812 /* FilterModel.swift */; };
-		62FE1B9B21BE1A6F0040DCDB /* sms.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 62FE1B9A21BE1A6F0040DCDB /* sms.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +50,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D4DE34E221EC6A1005C23AC /* sms.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = sms.mlmodel; path = MLModel/sms.mlmodel; sourceTree = "<group>"; };
+		2D4DE350221EC6A9005C23AC /* FilterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterModel.swift; path = Models/FilterModel.swift; sourceTree = "<group>"; };
 		2D57CA7D221E5ABB0064930D /* propoety.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = propoety.swift; sourceTree = "<group>"; };
 		2D57CA82221E77C70064930D /* MessageFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFilterTableViewCell.swift; sourceTree = "<group>"; };
+		2D57CA85221E9CF20064930D /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		2D57CA87221EA55F0064930D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		2D57CA89221EAE120064930D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		2D57CA8B221EAE200064930D /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		2D57CA8D221EBA500064930D /* MineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineWebViewController.swift; sourceTree = "<group>"; };
 		6267EF4921BDF0CE003BD812 /* MessageCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6267EF4C21BDF0CE003BD812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6267EF4E21BDF0CE003BD812 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +69,6 @@
 		6267EF6821BDF8E7003BD812 /* smsFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = smsFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6267EF6A21BDF8E7003BD812 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
 		6267EF6C21BDF8E7003BD812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6267EF7521BDFF03003BD812 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
-		62FE1B9A21BE1A6F0040DCDB /* sms.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sms.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2D57CA84221E9CC00064930D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6267EF4E21BDF0CE003BD812 /* MainViewController.swift */,
+				2D57CA85221E9CF20064930D /* GuideViewController.swift */,
+				2D57CA87221EA55F0064930D /* QuestionViewController.swift */,
+				2D57CA89221EAE120064930D /* AboutViewController.swift */,
+				2D57CA8B221EAE200064930D /* PrivacyViewController.swift */,
+				2D57CA8D221EBA500064930D /* MineWebViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		6267EF4021BDF0CE003BD812 = {
 			isa = PBXGroup;
 			children = (
@@ -108,9 +131,9 @@
 		6267EF4B21BDF0CE003BD812 /* fengSMS */ = {
 			isa = PBXGroup;
 			children = (
+				2D57CA84221E9CC00064930D /* ViewController */,
 				2D57CA7F221E77350064930D /* View */,
 				6267EF4C21BDF0CE003BD812 /* AppDelegate.swift */,
-				6267EF4E21BDF0CE003BD812 /* MainViewController.swift */,
 				6267EF5021BDF0CE003BD812 /* Main.storyboard */,
 				6267EF5321BDF0CF003BD812 /* Assets.xcassets */,
 				6267EF5521BDF0CF003BD812 /* LaunchScreen.storyboard */,
@@ -123,6 +146,8 @@
 		6267EF6921BDF8E7003BD812 /* smsFilter */ = {
 			isa = PBXGroup;
 			children = (
+				2D4DE350221EC6A9005C23AC /* FilterModel.swift */,
+				2D4DE34E221EC6A1005C23AC /* sms.mlmodel */,
 				6267EF7921BDFF33003BD812 /* MLModel */,
 				6267EF7421BDFEF6003BD812 /* Models */,
 				6267EF6A21BDF8E7003BD812 /* MessageFilterExtension.swift */,
@@ -134,7 +159,6 @@
 		6267EF7421BDFEF6003BD812 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6267EF7521BDFF03003BD812 /* FilterModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,7 +166,6 @@
 		6267EF7921BDFF33003BD812 /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
-				62FE1B9A21BE1A6F0040DCDB /* sms.mlmodel */,
 			);
 			path = MLModel;
 			sourceTree = "<group>";
@@ -250,8 +273,13 @@
 			files = (
 				6267EF4F21BDF0CE003BD812 /* MainViewController.swift in Sources */,
 				2D57CA7E221E5ABB0064930D /* propoety.swift in Sources */,
+				2D57CA88221EA55F0064930D /* QuestionViewController.swift in Sources */,
+				2D57CA8C221EAE200064930D /* PrivacyViewController.swift in Sources */,
+				2D57CA8A221EAE120064930D /* AboutViewController.swift in Sources */,
 				2D57CA83221E77C70064930D /* MessageFilterTableViewCell.swift in Sources */,
+				2D57CA86221E9CF20064930D /* GuideViewController.swift in Sources */,
 				6267EF4D21BDF0CE003BD812 /* AppDelegate.swift in Sources */,
+				2D57CA8E221EBA500064930D /* MineWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4DE351221EC6A9005C23AC /* FilterModel.swift in Sources */,
 				6267EF6B21BDF8E7003BD812 /* MessageFilterExtension.swift in Sources */,
-				62FE1B9B21BE1A6F0040DCDB /* sms.mlmodel in Sources */,
-				6267EF7621BDFF03003BD812 /* FilterModel.swift in Sources */,
+				2D4DE34F221EC6A1005C23AC /* sms.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +429,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -419,12 +447,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A68XXWLG6;
 				INFOPLIST_FILE = fengSMS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.feng.fengSMS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuyong.MessageCut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -439,12 +467,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9A68XXWLG6;
 				INFOPLIST_FILE = fengSMS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.feng.fengSMS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuyong.MessageCut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

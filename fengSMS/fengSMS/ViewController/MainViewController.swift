@@ -15,6 +15,13 @@ enum MainTableSection:Int{
 //打开 【设置 -> 信息 -> 未知与过滤短信】 在【短信过滤】标签下选择【剪信】
 class MainViewController: UIViewController {
 
+    @IBAction func shareButton(_ sender: Any) {
+    }
+    @IBAction func starButton(_ sender: Any) {
+    }
+    @IBAction func mineButton(_ sender: Any) {
+        self.opneHomePage()
+    }
     @IBOutlet weak var aboutView: UIView!
     @IBOutlet weak var filterView: UIView!
     lazy var tableView:UITableView = {
@@ -28,7 +35,7 @@ class MainViewController: UIViewController {
     }()
     
     var cellHeight:CGFloat!
-    var dataSource = ["常见问题","过滤规则","隐私政策"]
+    var dataSource = ["常见问题","关于剪信","隐私政策"]
     
     
     override func viewDidLoad() {
@@ -46,6 +53,7 @@ class MainViewController: UIViewController {
         filterView.layer.shadowOffset = CGSize(width: 0, height: 4)
         filterView.layer.borderColor = UIColor.white.cgColor
         filterView.layer.shadowRadius = 4;
+        filterView.addOnClickListener(target: self, action: #selector(touchFilter));
         
         aboutView.layer.cornerRadius = 10;
         self.aboutView.layer.shadowOpacity = 0.6;
@@ -63,6 +71,14 @@ class MainViewController: UIViewController {
 
 
 }
+
+extension MainViewController {
+    @objc func touchFilter() {
+        self.present(GuideViewController(), animated: true, completion: nil)
+        
+    }
+}
+
 
 extension MainViewController:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,7 +101,7 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
             label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
             label.textColor = UIColor.lightGray
             label.center.y = v.center.y
-            label.text = "关于剪信"
+            label.text = "关于"
             
             let line = UIView.init(frame:CGRect(x: 20, y: v.frame.height
                  - 1, width: self.tableView.frame.width, height: 1))
@@ -107,7 +123,39 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            self.present(QuestionViewController(), animated: true, completion: nil)
+        case 1:
+            self.present(AboutViewController(), animated: true, completion: nil)
+        default:
+            self.present(PrivacyViewController(), animated: true, completion: nil)
+            
+        }
+        
+    }
     
+    
+    
+}
+
+
+extension MainViewController {
+    
+    func shareActivity(){
+        
+    }
+    
+    func star(){
+        
+    }
+    
+    func opneHomePage(){
+        self.present(MineWebViewController(weburl:URL(string:  "www.liuyongvae.com")!), animated: true, completion: nil)
+        
+    }
     
     
 }
