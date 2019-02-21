@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MessageCut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage" translatesAutoresizingMaskIntoConstraints="NO" id="gd5-0l-S6V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="zc5-7R-onN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td8-vZ-Rcm">
+                                <rect key="frame" x="22" y="269" width="331" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="感谢使用剪信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVh-OJ-Cur">
+                                        <rect key="frame" x="20" y="8" width="80" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4P-Wi-xhb">
+                                        <rect key="frame" x="6" y="32" width="319" height="1"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="dRx-iL-wYI"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何开启短信过滤？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSY-f3-M23">
+                                        <rect key="frame" x="20" y="41" width="156" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Ypk-LV-hUe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打开 【设置 -&gt; 信息 -&gt; 未知与过滤短信】 在【短信过滤】标签下选择【剪信】就可以辣" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WG-Ym-G1t">
+                                        <rect key="frame" x="20" y="68.5" width="303" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2WG-Ym-G1t" secondAttribute="bottom" constant="20" id="5kL-4B-AqJ"/>
+                                    <constraint firstAttribute="height" constant="120" id="IlP-ew-XIi"/>
+                                    <constraint firstItem="h4P-Wi-xhb" firstAttribute="top" secondItem="oVh-OJ-Cur" secondAttribute="bottom" constant="8" id="T9g-OW-QlI"/>
+                                    <constraint firstItem="iSY-f3-M23" firstAttribute="top" secondItem="h4P-Wi-xhb" secondAttribute="bottom" constant="8" id="be6-fS-gWQ"/>
+                                    <constraint firstItem="iSY-f3-M23" firstAttribute="leading" secondItem="Td8-vZ-Rcm" secondAttribute="leading" constant="20" id="hLN-sQ-fM4"/>
+                                    <constraint firstAttribute="trailing" secondItem="2WG-Ym-G1t" secondAttribute="trailing" constant="8" id="jeZ-2V-RR1"/>
+                                    <constraint firstItem="oVh-OJ-Cur" firstAttribute="leading" secondItem="Td8-vZ-Rcm" secondAttribute="leading" constant="20" id="kfu-OA-BYy"/>
+                                    <constraint firstItem="2WG-Ym-G1t" firstAttribute="leading" secondItem="Td8-vZ-Rcm" secondAttribute="leading" constant="20" id="naV-4A-qqd"/>
+                                    <constraint firstItem="h4P-Wi-xhb" firstAttribute="leading" secondItem="Td8-vZ-Rcm" secondAttribute="leading" constant="6" id="pKy-qo-yQh"/>
+                                    <constraint firstItem="oVh-OJ-Cur" firstAttribute="top" secondItem="Td8-vZ-Rcm" secondAttribute="topMargin" id="qFf-qa-WsA"/>
+                                    <constraint firstAttribute="trailing" secondItem="h4P-Wi-xhb" secondAttribute="trailing" constant="6" id="vvf-iW-EWo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcl-xg-RZD">
+                                <rect key="frame" x="22" y="416" width="331" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="axk-Ur-Nuz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zaO-cf-6f7">
+                                <rect key="frame" x="42" y="602" width="291" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2n-yK-czz">
+                                        <rect key="frame" x="0.0" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="35n-6E-ekh"/>
+                                            <constraint firstAttribute="width" constant="32" id="c3g-kI-4KI"/>
+                                        </constraints>
+                                        <state key="normal" image="share"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zA-C1-DQ7">
+                                        <rect key="frame" x="129.5" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="P61-aQ-x94"/>
+                                            <constraint firstAttribute="height" constant="32" id="lmc-Dx-cZ3"/>
+                                        </constraints>
+                                        <state key="normal" image="star"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHM-Mv-tLI">
+                                        <rect key="frame" x="259" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="71r-bu-u0T"/>
+                                            <constraint firstAttribute="height" constant="32" id="cRx-8a-wrk"/>
+                                        </constraints>
+                                        <state key="normal" image="about"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="16c-nb-mlH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gd5-0l-S6V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ZA-HP-qKs"/>
+                            <constraint firstItem="gd5-0l-S6V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9a6-9D-pYt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wcl-xg-RZD" secondAttribute="trailing" constant="22" id="agE-qj-XSt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Td8-vZ-Rcm" secondAttribute="trailing" constant="22" id="dKw-b6-CL0"/>
+                            <constraint firstItem="Wcl-xg-RZD" firstAttribute="top" secondItem="Td8-vZ-Rcm" secondAttribute="bottom" constant="27" id="iMu-oG-rB0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zaO-cf-6f7" secondAttribute="bottom" constant="15" id="rC7-bh-q2D"/>
+                            <constraint firstItem="Td8-vZ-Rcm" firstAttribute="top" secondItem="gd5-0l-S6V" secondAttribute="bottom" constant="50" id="tpB-l3-j0o"/>
+                            <constraint firstItem="Td8-vZ-Rcm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="wY3-Pe-6lq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zaO-cf-6f7" secondAttribute="trailing" constant="42" id="wxF-Cc-DsD"/>
+                            <constraint firstItem="zaO-cf-6f7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="xUm-SF-6F0"/>
+                            <constraint firstItem="gd5-0l-S6V" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y4T-i0-ToN"/>
+                            <constraint firstItem="Wcl-xg-RZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="zLe-Sx-QyE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="aboutView" destination="Wcl-xg-RZD" id="p3h-ra-Kss"/>
+                        <outlet property="filterView" destination="Td8-vZ-Rcm" id="IHS-Ih-vHz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ipe-5l-kZg">
+            <objects>
+                <viewController id="JzY-aS-zVa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YYR-ZV-s27">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fy-qK-Aqo">
+                                <rect key="frame" x="24" y="20" width="335" height="607"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">当正确短信被划归为垃圾短信后，这个号码之后所有的短信都会被标记为垃圾短信。
+
+从标记中放出的方法有三种，分别是：
+1、回复短信或彩信3次
+2、该号码添加到通讯录
+3、删除来自该号码的全部短信</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sK6-7y-Pae"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5u-9a-1Rj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="about" width="64" height="64"/>
+        <image name="share" width="64" height="64"/>
+        <image name="star" width="64" height="64"/>
+        <image name="topImage" width="2480" height="1435"/>
+    </resources>
+</document>
