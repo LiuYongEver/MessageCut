@@ -16,6 +16,7 @@ enum MainTableSection:Int{
 class MainViewController: UIViewController {
 
     @IBAction func shareButton(_ sender: Any) {
+        self.shareActivity()
     }
     @IBAction func starButton(_ sender: Any) {
     }
@@ -145,7 +146,20 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
 extension MainViewController {
     
     func shareActivity(){
-        
+        //设定分享内容
+        let textShare = "剪信，AI帮你识别垃圾短信"
+        let imageShare = UIImage(named: "topImage")
+        let urlShare = URL(string: "http://www.baidu.com")
+        let activityItems = [textShare,imageShare as Any,urlShare as Any]
+        //弹出分享框
+        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities:nil)
+        present(activityViewController, animated: true, completion: nil)
+        //分享结束后的回调
+        activityViewController.completionWithItemsHandler = {(_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ activityError: Error?) -> Void in
+            print(completed ? "成功" : "失败")
+        }
+   
+        activityViewController.excludedActivityTypes = [.airDrop]
     }
     
     func star(){
