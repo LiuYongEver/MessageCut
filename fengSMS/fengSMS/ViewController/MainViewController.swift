@@ -19,8 +19,10 @@ class MainViewController: UIViewController {
         self.shareActivity()
     }
     @IBAction func starButton(_ sender: Any) {
+        self.star()
     }
-    @IBAction func mineButton(_ sender: Any) {
+
+    @IBAction func mineTouch(_ sender: Any) {
         self.opneHomePage()
     }
     @IBOutlet weak var aboutView: UIView!
@@ -36,7 +38,7 @@ class MainViewController: UIViewController {
     }()
     
     var cellHeight:CGFloat!
-    var dataSource = ["常见问题","关于剪信","隐私政策"]
+    var dataSource = ["常见问题","意见反馈","隐私政策"]
     
     
     override func viewDidLoad() {
@@ -130,15 +132,13 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
         case 0:
             self.present(QuestionViewController(), animated: true, completion: nil)
         case 1:
-            self.present(AboutViewController(), animated: true, completion: nil)
+            feedBack()
         default:
             self.present(PrivacyViewController(), animated: true, completion: nil)
             
         }
         
     }
-    
-    
     
 }
 
@@ -149,7 +149,7 @@ extension MainViewController {
         //设定分享内容
         let textShare = "剪信，AI帮你识别垃圾短信"
         let imageShare = UIImage(named: "topImage")
-        let urlShare = URL(string: "http://www.baidu.com")
+        let urlShare = URL(string: "https://www.pgyer.com/messageCut")
         let activityItems = [textShare,imageShare as Any,urlShare as Any]
         //弹出分享框
         let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities:nil)
@@ -163,11 +163,19 @@ extension MainViewController {
     }
     
     func star(){
-        
+        let updateUrl:URL = URL.init(string: "https://www.pgyer.com/messageCut")!
+         UIApplication.shared.openURL(updateUrl)
+    }
+    
+    func feedBack(){
+        let updateUrl:URL = URL.init(string: "https://support.qq.com/product/55168")!
+        UIApplication.shared.openURL(updateUrl)
     }
     
     func opneHomePage(){
-        self.present(MineWebViewController(weburl:URL(string:  "www.liuyongvae.com")!), animated: true, completion: nil)
+        let updateUrl:URL = URL.init(string: "http://www.liuyongvae.com")!
+        UIApplication.shared.openURL(updateUrl)
+
         
     }
     
