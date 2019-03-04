@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SafariServices
+import StoreKit
 
 enum MainTableSection:Int{
     case MainTableSectionFilter = 0 ,MainTableSectionAbout,MainTableSectionShare,MainTableSectionCount
@@ -14,14 +15,14 @@ enum MainTableSection:Int{
 //剪信是一款机器学习过滤短信的应用，现在刚刚出生，样本不多，请大家期待后续版本更新OwO
 //打开 【设置 -> 信息 -> 未知与过滤短信】 在【短信过滤】标签下选择【剪信】
 class MainViewController: UIViewController {
-
+    
     @IBAction func shareButton(_ sender: Any) {
         self.shareActivity()
     }
     @IBAction func starButton(_ sender: Any) {
         self.star()
     }
-
+    
     @IBAction func mineTouch(_ sender: Any) {
         self.opneHomePage()
     }
@@ -45,7 +46,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
     }
     
     
@@ -71,8 +72,8 @@ class MainViewController: UIViewController {
         self.cellHeight = cellHeight/CGFloat(self.dataSource.count+1)
         
     }
-
-
+    
+    
 }
 
 extension MainViewController {
@@ -93,7 +94,7 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-         return cellHeight
+        return cellHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -107,7 +108,7 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
             label.text = "关于"
             
             let line = UIView.init(frame:CGRect(x: 20, y: v.frame.height
-                 - 1, width: self.tableView.frame.width, height: 1))
+                - 1, width: self.tableView.frame.width, height: 1))
             line.backgroundColor = lineColor
             v.addSubview(line)
             v.addSubview(label)
@@ -143,7 +144,7 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
 }
 
 
-extension MainViewController {
+extension MainViewController:SKStoreProductViewControllerDelegate {
     
     func shareActivity(){
         //设定分享内容
@@ -158,26 +159,50 @@ extension MainViewController {
         activityViewController.completionWithItemsHandler = {(_ activityType: UIActivity.ActivityType?, _ completed: Bool, _ returnedItems: [Any]?, _ activityError: Error?) -> Void in
             print(completed ? "成功" : "失败")
         }
-   
+        
         activityViewController.excludedActivityTypes = [.airDrop]
     }
     
     func star(){
-        let updateUrl:URL = URL.init(string: "https://www.pgyer.com/messageCut")!
-         UIApplication.shared.openURL(updateUrl)
+        
+        self.view.makeToastActivity(.center)
+        
+        let sk = SKStoreProductViewController()
+        sk.delegate = self;
+        
+        
+        sk.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier:"1454506715"]) { (success
+            , error ) in
+            if (!success) {
+                let style = ToastStyle()
+                if let vv = self.view {
+                    vv.makeToast(error as? String, duration: 3.0, position: .center, title: nil, image: nil, style: style, completion: nil)
+                }
+                
+            } else {
+                self.view.hideToast()
+                self.present(sk, animated: true, completion: nil);
+            }
+            
+        }
     }
     
     func feedBack(){
         let updateUrl:URL = URL.init(string: "https://support.qq.com/product/55168")!
-        UIApplication.shared.openURL(updateUrl)
+        let svc = SFSafariViewController.init(url: updateUrl)
+        self.present(svc, animated: true, completion: nil);
     }
     
     func opneHomePage(){
         let updateUrl:URL = URL.init(string: "http://www.liuyongvae.com")!
-        UIApplication.shared.openURL(updateUrl)
-
+        let svc = SFSafariViewController.init(url: updateUrl)
+        self.present(svc, animated: true, completion: nil);
         
     }
     
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        viewController.dismiss(animated: true, completion: nil);
+    }
     
 }
+

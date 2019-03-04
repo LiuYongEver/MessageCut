@@ -16,6 +16,7 @@
 		2D57CA8A221EAE120064930D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA89221EAE120064930D /* AboutViewController.swift */; };
 		2D57CA8C221EAE200064930D /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA8B221EAE200064930D /* PrivacyViewController.swift */; };
 		2D57CA8E221EBA500064930D /* MineWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D57CA8D221EBA500064930D /* MineWebViewController.swift */; };
+		2DB8350C222CFDF900923B00 /* toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8350B222CFDF900923B00 /* toast.swift */; };
 		6267EF4D21BDF0CE003BD812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF4C21BDF0CE003BD812 /* AppDelegate.swift */; };
 		6267EF4F21BDF0CE003BD812 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6267EF4E21BDF0CE003BD812 /* MainViewController.swift */; };
 		6267EF5221BDF0CE003BD812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6267EF5021BDF0CE003BD812 /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 		2D57CA89221EAE120064930D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		2D57CA8B221EAE200064930D /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		2D57CA8D221EBA500064930D /* MineWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineWebViewController.swift; sourceTree = "<group>"; };
+		2DB8350B222CFDF900923B00 /* toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toast.swift; sourceTree = "<group>"; };
 		6267EF4921BDF0CE003BD812 /* MessageCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6267EF4C21BDF0CE003BD812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6267EF4E21BDF0CE003BD812 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				2D57CA82221E77C70064930D /* MessageFilterTableViewCell.swift */,
+				2DB8350B222CFDF900923B00 /* toast.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6267EF4F21BDF0CE003BD812 /* MainViewController.swift in Sources */,
+				2DB8350C222CFDF900923B00 /* toast.swift in Sources */,
 				2D57CA7E221E5ABB0064930D /* propoety.swift in Sources */,
 				2D57CA88221EA55F0064930D /* QuestionViewController.swift in Sources */,
 				2D57CA8C221EAE200064930D /* PrivacyViewController.swift in Sources */,
